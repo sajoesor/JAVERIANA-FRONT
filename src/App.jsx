@@ -12,8 +12,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      //.get("http://localhost:5000/api/salones")
-      .get("https://javeriana-back-bpqawmpyp-sajoesor-gmailcoms-projects.vercel.app/api/salones")
+      .get("http://localhost:5000/api/salones")
       .then((res) => setSalones(res.data))
       .catch((err) => console.error(err))
   }, [])
@@ -24,8 +23,7 @@ const App = () => {
 
   const handlePregunta = async () => {
     try {
-      //const res = await axios.post("http://localhost:5000/api/salones/preguntar", { pregunta })
-      const res = await axios.post("https://javeriana-back-bpqawmpyp-sajoesor-gmailcoms-projects.vercel.app/api/salones/preguntar", { pregunta })
+      const res = await axios.post("http://localhost:5000/api/salones/preguntar", { pregunta })
       setRespuesta(res.data.respuesta)
     } catch (error) {
       setRespuesta("Error al obtener respuesta.")
