@@ -25,7 +25,7 @@ const App = () => {
   const handlePregunta = async () => {
     try {
       //const res = await axios.post("http://localhost:5000/api/salones/preguntar", { pregunta })
-      const res = await axios.post("https://javeriana-back.vercel.app/api/chat", { pregunta })
+      const res = await axios.post("https://javeriana-back.vercel.app/api/salones/preguntar", { pregunta })
       setRespuesta(res.data.respuesta)
     } catch (error) {
       setRespuesta("Error al obtener respuesta.")
